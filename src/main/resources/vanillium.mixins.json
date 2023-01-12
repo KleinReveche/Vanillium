@@ -1,0 +1,23 @@
+{
+	"required": true,
+	"package": "com.kleinreveche.vanillium.patches",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"AnvilMenuMixin",
+		"DamageEnchantmentPatchMixin",
+		"EnhancedIceMixin",
+		"EnhancedTotemMixin",
+		"FirePatchMixin",
+		"InfinityPatchMixin",
+		"MerchantOfferMixin",
+		"PlayerMixin",
+		"SlimePatchMixin",
+		"SweetBerryBushBlockMixin",
+		"EntityTypeMixin",
+		"FishingUnpatchMixin",
+		"ProtectionUnpatchMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

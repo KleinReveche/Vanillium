@@ -12,8 +12,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.Random;
-
 @Mixin({CropBlock.class})
 public class EnhancedIceMixin {
     @Inject(method = {"randomTick"}, at = {@At("HEAD")}, cancellable = true)

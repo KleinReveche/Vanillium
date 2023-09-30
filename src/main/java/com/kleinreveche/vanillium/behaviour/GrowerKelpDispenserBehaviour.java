@@ -1,7 +1,8 @@
 package com.kleinreveche.vanillium.behaviour;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.BlockSource;
+import net.minecraft.core.Direction;
+import net.minecraft.core.dispenser.BlockSource;
 import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.BoneMealItem;
@@ -24,8 +25,8 @@ public class GrowerKelpDispenserBehaviour extends OptionalDispenseItemBehavior {
 
     protected @NotNull ItemStack execute(BlockSource block, ItemStack stack) {
         setSuccess(true);
-        ServerLevel world = block.getLevel();
-        BlockPos blockPos = block.getPos().relative(block.getBlockState().getValue(DispenserBlock.FACING));
+        ServerLevel world = block.level().getLevel();
+        BlockPos blockPos = block.pos().relative(block.state().getValue(DispenserBlock.FACING));
         if (BoneMealItem.growCrop(stack, world, blockPos) || BoneMealItem.growWaterPlant(stack, world, blockPos, null)) {
             world.levelEvent(2005, blockPos, 0);
         } else {

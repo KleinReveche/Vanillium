@@ -7,7 +7,6 @@
 		"DamageEnchantmentPatchMixin",
 		"EnhancedIceMixin",
 		"EnhancedTotemMixin",
-		"FirePatchMixin",
 		"InfinityPatchMixin",
 		"MerchantOfferMixin",
 		"PlayerMixin",
